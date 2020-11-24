@@ -1,0 +1,14 @@
+.markerInfo {
+  position: absolute;
+  width: 400px;
+  top: 50px;
+  right: 50px;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: rgba(0, 0, 0, 0.35);
+  border-radius: 10px;
+  color: white;
+  padding: 20px;
+}
