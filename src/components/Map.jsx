@@ -2,9 +2,18 @@ import React, { useState } from "react";
 import GoogleMapReact from "google-map-react";
 import Marker from "./Marker";
 import MarkerInfo from "./MarkerInfo";
-import "../css/map.css";
+import { makeStyles } from "@material-ui/styles";
+
+const styles = () => ({
+  root: {
+    height: "100vh",
+    width: "100%",
+  },
+});
+const useStyles = makeStyles(styles);
 
 const Map = ({ wildFires, center, zoom }) => {
+  const classes = useStyles();
   const [info, setInfo] = useState(null);
 
   const markers = wildFires.map((wildFire, index) => {
@@ -28,7 +37,7 @@ const Map = ({ wildFires, center, zoom }) => {
 
   return (
     // Important! Always set the container height explicitly
-    <div className="map">
+    <div className={classes.root}>
       <GoogleMapReact
         bootstrapURLKeys={{ key: "AIzaSyB14xbMSEg46WaKyjJo1cufzAxRS36hFhQ" }}
         defaultCenter={center}

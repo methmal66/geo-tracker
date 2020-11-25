@@ -1,4 +1,3 @@
-import "./App.css";
 import { useState, useEffect } from "react";
 import Map from "./components/Map";
 import Loader from "./components/Loader";
