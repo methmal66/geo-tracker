@@ -1,22 +1,19 @@
 {
   "files": {
-    "main.css": "/geo-tracker/static/css/main.7f7cfb29.chunk.css",
-    "main.js": "/geo-tracker/static/js/main.17ede9e6.chunk.js",
-    "main.js.map": "/geo-tracker/static/js/main.17ede9e6.chunk.js.map",
-    "runtime-main.js": "/geo-tracker/static/js/runtime-main.dfd7830f.js",
-    "runtime-main.js.map": "/geo-tracker/static/js/runtime-main.dfd7830f.js.map",
-    "static/js/2.a75b742a.chunk.js": "/geo-tracker/static/js/2.a75b742a.chunk.js",
-    "static/js/2.a75b742a.chunk.js.map": "/geo-tracker/static/js/2.a75b742a.chunk.js.map",
-    "static/js/3.99f60946.chunk.js": "/geo-tracker/static/js/3.99f60946.chunk.js",
-    "static/js/3.99f60946.chunk.js.map": "/geo-tracker/static/js/3.99f60946.chunk.js.map",
+    "main.js": "/geo-tracker/static/js/main.ec1f80e8.chunk.js",
+    "main.js.map": "/geo-tracker/static/js/main.ec1f80e8.chunk.js.map",
+    "runtime-main.js": "/geo-tracker/static/js/runtime-main.76fe4f8b.js",
+    "runtime-main.js.map": "/geo-tracker/static/js/runtime-main.76fe4f8b.js.map",
+    "static/js/2.ced55626.chunk.js": "/geo-tracker/static/js/2.ced55626.chunk.js",
+    "static/js/2.ced55626.chunk.js.map": "/geo-tracker/static/js/2.ced55626.chunk.js.map",
+    "static/js/3.085ebd6b.chunk.js": "/geo-tracker/static/js/3.085ebd6b.chunk.js",
+    "static/js/3.085ebd6b.chunk.js.map": "/geo-tracker/static/js/3.085ebd6b.chunk.js.map",
     "index.html": "/geo-tracker/index.html",
-    "static/css/main.7f7cfb29.chunk.css.map": "/geo-tracker/static/css/main.7f7cfb29.chunk.css.map",
-    "static/js/2.a75b742a.chunk.js.LICENSE.txt": "/geo-tracker/static/js/2.a75b742a.chunk.js.LICENSE.txt"
+    "static/js/2.ced55626.chunk.js.LICENSE.txt": "/geo-tracker/static/js/2.ced55626.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.dfd7830f.js",
-    "static/js/2.a75b742a.chunk.js",
-    "static/css/main.7f7cfb29.chunk.css",
-    "static/js/main.17ede9e6.chunk.js"
+    "static/js/runtime-main.76fe4f8b.js",
+    "static/js/2.ced55626.chunk.js",
+    "static/js/main.ec1f80e8.chunk.js"
   ]
 }
