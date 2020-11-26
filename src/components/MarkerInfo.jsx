@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/styles";
 
-const styles = () => ({
+const useStyles = makeStyles(() => ({
   root: {
     position: "absolute",
     width: "400px",
@@ -16,8 +16,7 @@ const styles = () => ({
     color: "white",
     padding: "20px",
   },
-});
-const useStyles = makeStyles(styles);
+}));
 
 const MarkerInfo = ({ info }) => {
   const classes = useStyles();

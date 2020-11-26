@@ -4,13 +4,12 @@ import Marker from "./Marker";
 import MarkerInfo from "./MarkerInfo";
 import { makeStyles } from "@material-ui/styles";
 
-const styles = () => ({
+const useStyles = makeStyles(() => ({
   root: {
     height: "100vh",
     width: "100%",
   },
-});
-const useStyles = makeStyles(styles);
+}));
 
 const Map = ({ wildFires, center, zoom }) => {
   const classes = useStyles();
