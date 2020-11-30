@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import Map from "./components/Map";
 import Loader from "./components/Loader";
+import { useDispatch } from "react-redux";
+import { addWildFire } from "./Actions/wildFires";
 
 const App = () => {
-  const [wildFires, setWildFires] = useState([]);
+  const dispatch = useDispatch();
   const [loading, setLoading] = useState();
 
   useEffect(() => {
@@ -16,7 +18,8 @@ const App = () => {
       events.forEach((event) => {
         switch (event.categories[0].title) {
           case "Wildfires":
-            setWildFires((old) => [...old, event]);
+            dispatch(addWildFire(event));
+            console.log("dispatched successfully");
             break;
 
           default:
@@ -30,11 +33,7 @@ const App = () => {
     fetchEvents();
   }, []);
 
-  return (
-    <div className="App">
-      {!loading ? <Map wildFires={wildFires} /> : <Loader />}
-    </div>
-  );
+  return <div className="App">{!loading ? <Map /> : <Loader />}</div>;
 };
 
 export default App;

@@ -1,4 +1,5 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { makeStyles } from "@material-ui/styles";
 
 const useStyles = makeStyles(() => ({
@@ -18,24 +19,31 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-const MarkerInfo = ({ info }) => {
+const MarkerInfo = () => {
   const classes = useStyles();
-
-  return (
-    <div className={classes.root}>
-      <span>
-        <strong>ID : </strong>
-        {info.id}
-      </span>
-      <span>
-        <strong>Title :</strong> {info.title}
-      </span>
-      <span>
-        <strong>More : </strong>
-        <a href={info.link}>{info.link}</a>
-      </span>
-    </div>
+  const id = useSelector((state) => state.clickedId);
+  const wildFire = useSelector(
+    (state) => state.wildFires.filter((wildFire) => wildFire.info.id === id)[0]
   );
+  if (wildFire) {
+    const { title, link } = wildFire.info;
+    return (
+      <div className={classes.root}>
+        <span>
+          <strong>ID : </strong>
+          {id}
+        </span>
+        <span>
+          <strong>Title :</strong> {title}
+        </span>
+        <span>
+          <strong>More : </strong>
+          <a href={link}>{link}</a>
+        </span>
+      </div>
+    );
+  }
+  return <div></div>;
 };
 
 export default MarkerInfo;

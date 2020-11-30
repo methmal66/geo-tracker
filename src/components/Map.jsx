@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import { useSelector } from "react-redux";
 import GoogleMapReact from "google-map-react";
 import Marker from "./Marker";
 import MarkerInfo from "./MarkerInfo";
@@ -11,28 +12,13 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-const Map = ({ wildFires, center, zoom }) => {
+const Map = ({ center, zoom }) => {
   const classes = useStyles();
-  const [info, setInfo] = useState(null);
+  const wildFires = useSelector((state) => state.wildFires);
 
-  const markers = wildFires.map((wildFire, index) => {
-    const handleClick = () => {
-      setInfo({
-        id: wildFire.id,
-        title: wildFire.title,
-        link: wildFire.sources[0].url,
-      });
-    };
-
-    return (
-      <Marker
-        key={index}
-        lat={wildFire.geometries[0].coordinates[1]}
-        lng={wildFire.geometries[0].coordinates[0]}
-        onClick={handleClick}
-      />
-    );
-  });
+  const markers = wildFires.map(({ info, cords }) => (
+    <Marker key={info.id} id={info.id} lat={cords.lat} lng={cords.lng} />
+  ));
 
   return (
     // Important! Always set the container height explicitly
@@ -44,7 +30,7 @@ const Map = ({ wildFires, center, zoom }) => {
       >
         {markers}
       </GoogleMapReact>
-      {info && <MarkerInfo info={info} />}
+      <MarkerInfo />
     </div>
   );
 };
