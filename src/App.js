@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Map from "./components/Map";
 import Loader from "./components/Loader";
 import { useDispatch } from "react-redux";

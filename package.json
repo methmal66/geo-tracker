@@ -19,7 +19,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && sudo rm -r -f ../backend/client/static/js ../backend/client/templates/index.html && sudo cp -r build/static/js ../backend/client/static/js && sudo cp build/index.html ../backend/client/templates/index.html",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
